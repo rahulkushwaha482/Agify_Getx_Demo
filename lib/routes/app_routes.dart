@@ -8,6 +8,7 @@ abstract class Routes {
   static const PEGINATION_PAGE = _Paths.PEGINATION_PAGE;
   static const CAMERA_SCREEN = _Paths.CAMERA_SCREEN;
 
+
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const HOME = '/home';
   static const PEGINATION_PAGE = '/pegination';
   static const CAMERA_SCREEN = '/camera';
+
 }

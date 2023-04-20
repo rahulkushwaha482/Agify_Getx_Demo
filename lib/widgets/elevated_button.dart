@@ -1,6 +1,8 @@
 import 'package:agify_getx_demo/constant/app_theme.dart';
 import 'package:flutter/material.dart';
 
+import 'package:get/get.dart';
+
 class ElevatedButtonText extends StatelessWidget {
   final String buttonText;
   final dynamic onPressed;
@@ -29,7 +31,8 @@ class ElevatedButtonText extends StatelessWidget {
           child: Center(
             child: Text(
               buttonText,
-              style: const  TextStyle(
+
+              style: TextStyle(
                 fontSize: 20
               )
             ),
@@ -38,6 +41,7 @@ class ElevatedButtonText extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppTheme.kDarkBlue,
+          primary: AppTheme.kDarkBlue,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius??10),
           ),

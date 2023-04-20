@@ -29,42 +29,42 @@ packages:
     dependency: "direct main"
     description:
       name: camera
-      sha256: b7316e7861cf7a7196ef670f391a0e8d1f36eebd4e199d3077e0a23e11db2a44
+      sha256: "7afc256902062cab191540c09908b98bc71e93d5e20b6486dbee51aa7731e9b2"
       url: "https://pub.dev"
     source: hosted
-    version: "0.10.1"
+    version: "0.10.4"
   camera_android:
     dependency: transitive
     description:
       name: camera_android
-      sha256: "24408d7078dd9b5e70bdb2ff35651c250b0efc9168df287e30fcb151e93ec515"
+      sha256: "772c111c78f31f868b98dbf6dbeda8d6ff77acea773a92ea5705ee2f7949ebfb"
       url: "https://pub.dev"
     source: hosted
-    version: "0.10.2"
+    version: "0.10.5"
   camera_avfoundation:
     dependency: transitive
     description:
       name: camera_avfoundation
-      sha256: "4e1be6a29b5423136efe683c97f210dc6423011f8ad09c0e18b3e629eae8c896"
+      sha256: "7ac8b950672716722af235eed7a7c37896853669800b7da706bb0a9fd41d3737"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.10"
+    version: "0.9.13+1"
   camera_platform_interface:
     dependency: transitive
     description:
       name: camera_platform_interface
-      sha256: b13c4c7a1462f6b3453ac5df900fd42a8ab66477c2004bc16f8a7fdcf3e5fcd9
+      sha256: "525017018d116c5db8c4c43ec2d9b1663216b369c9f75149158280168a7ce472"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.2"
+    version: "2.5.0"
   camera_web:
     dependency: transitive
     description:
       name: camera_web
-      sha256: "6db5052de8c5074edc8cf75bc9a63a56dd0ae18646152b9d2273a9a4f6301b17"
+      sha256: d77965f32479ee6d8f48205dcf10f845d7210595c6c00faa51eab265d1cae993
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.1"
+    version: "0.3.1+3"
   characters:
     dependency: transitive
     description:
@@ -93,10 +93,10 @@ packages:
     dependency: transitive
     description:
       name: cross_file
-      sha256: f71079978789bc2fe78d79227f1f8cfe195b31bbd8db2399b0d15a4b96fb843b
+      sha256: "0b0036e8cccbfbe0555fd83c1d31a6f30b77a96b598b35a5d36dd41f718695e9"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.3+2"
+    version: "0.3.3+4"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -130,10 +130,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_plugin_android_lifecycle
-      sha256: "60fc7b78455b94e6de2333d2f95196d32cf5c22f4b0b0520a628804cb463503b"
+      sha256: c224ac897bed083dabf11f238dd11a239809b446740be0c2044608c50029ffdf
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.7"
+    version: "2.0.9"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -164,10 +164,10 @@ packages:
     dependency: transitive
     description:
       name: http_parser
-      sha256: db3060f22889f3d9d55f6a217565486737037eec3609f7f3eca4d0c67ee0d8a0
+      sha256: "2aa08ce0341cc9b354a498388e30986515406668dbcc4f7c950c3e715496693b"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.1"
+    version: "4.0.2"
   js:
     dependency: transitive
     description:
@@ -220,10 +220,10 @@ packages:
     dependency: transitive
     description:
       name: plugin_platform_interface
-      sha256: dbf0f707c78beedc9200146ad3cb0ab4d5da13c246336987be6940f026500d3a
+      sha256: "6a2128648c854906c53fa8e33986fc0247a1116122f9534dd20e3ab9e16a32bc"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.3"
+    version: "2.1.4"
   quiver:
     dependency: transitive
     description:
@@ -297,10 +297,10 @@ packages:
     dependency: transitive
     description:
       name: typed_data
-      sha256: "53bdf7e979cfbf3e28987552fd72f637e63f3c8724c9e56d9246942dc2fa36ee"
+      sha256: "26f87ade979c47a150c9eaab93ccd2bebe70a27dc0b4b29517f2904f04eb11a5"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.0"
+    version: "1.3.1"
   vector_math:
     dependency: transitive
     description:
@@ -311,4 +311,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.18.0 <3.0.0"
-  flutter: ">=3.0.0"
+  flutter: ">=3.3.0"

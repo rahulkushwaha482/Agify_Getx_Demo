@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:agify_getx_demo/constant/app_theme.dart';
 import 'package:agify_getx_demo/routes/app_pages.dart';
 import 'package:agify_getx_demo/services/api_helper.dart';
@@ -6,6 +7,9 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+
 import 'constant/app_error.dart';
 import 'constant/app_string.dart';
 

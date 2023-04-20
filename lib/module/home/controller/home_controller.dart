@@ -6,17 +6,22 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import '../../../services/api_helper.dart';
 
+
+
 class HomeController extends GetxController{
 
  late TextEditingController nameController;
  final _apiHelper = Get.find<ApiHelper>();
- Rx<AgeResponse> ageDetails = AgeResponse().obs;
+
+ Rx<AgeResponse> ageDetails =
+     AgeResponse().obs;
 
 
   @override
   void onInit() {
     super.onInit();
     nameController =  TextEditingController();
+
   }
 
   @override
@@ -38,6 +43,7 @@ class HomeController extends GetxController{
         snackPosition: SnackPosition.BOTTOM,
       );
     }else{
+
       _apiHelper.getApiCall(nameController.text).then(
             (response) {
           if (response?.statusCode == 200) {
@@ -57,6 +63,7 @@ class HomeController extends GetxController{
 
   }
 
+
   void nextPage(){
     Get.toNamed(Routes.PEGINATION_PAGE);
   }
@@ -64,4 +71,5 @@ class HomeController extends GetxController{
   void openCamera(){
     Get.toNamed(Routes.CAMERA_SCREEN);
   }
+
 }

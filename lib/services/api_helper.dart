@@ -35,6 +35,7 @@ class ApiHelper {
     try {
       response = await post(
         Uri.parse(baseUrl + urlEndPoint),
+
         body: requestMap,
       );
       // To remove the loader.
@@ -54,6 +55,8 @@ class ApiHelper {
       Loader().showLoadingWidget();
       response = await get(
         Uri.parse(baseUrl + endPoint + urlEndPoint),
+
+
       );
       Get.back();
       _errorHandler(response);
@@ -63,6 +66,7 @@ class ApiHelper {
     }
     return response;
   }
+
 
   Future<Response?> getPost(int pageNum) async {
     Response? response;
@@ -80,4 +84,5 @@ class ApiHelper {
 
     return response;
   }
+
 }
