@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeView extends GetView<HomeController> {
-
   const HomeView({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +38,16 @@ class HomeView extends GetView<HomeController> {
             const SizedBox(
               height: 20,
             ),
-            Center(
-              child: ElevatedButtonText(
-                buttonText: 'Submit',
-                onPressed: controller.submit,
-                buttonHorizontalPadding: 0,
-                buttonPadding: 10,
+            Obx(
+              () =>
+               Center(
+                child: ElevatedButtonText(
+                  buttonText: 'Submit',
+                  onPressed: controller.submit,
+                  buttonHorizontalPadding: 0,
+                  buttonPadding: 10,
+                  isLoading: controller.loading.value,
+                ),
               ),
             ),
             const SizedBox(
@@ -58,10 +60,12 @@ class HomeView extends GetView<HomeController> {
                   style: TextStyle(fontSize: 14, color: AppTheme.kBlack),
                 ),
                 Obx(
-                      ()  =>
-                   Text(
-                       (controller.ageDetails.value.age !=null) ?controller.ageDetails.value.age.toString():"0",
-                    style: const  TextStyle(fontSize: 25, color: AppTheme.kDarkBlue),
+                  () => Text(
+                    (controller.ageDetails.value.age != null)
+                        ? controller.ageDetails.value.age.toString()
+                        : "0",
+                    style: const TextStyle(
+                        fontSize: 25, color: AppTheme.kDarkBlue),
                   ),
                 )
               ],
@@ -72,18 +76,21 @@ class HomeView extends GetView<HomeController> {
                 onPressed: controller.nextPage,
                 buttonHorizontalPadding: 0,
                 buttonPadding: 10,
+                isLoading: false,
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Center(
               child: ElevatedButtonText(
                 buttonText: 'Open Camera',
                 onPressed: controller.openCamera,
                 buttonHorizontalPadding: 0,
                 buttonPadding: 10,
+                isLoading: false,
               ),
             ),
-
           ],
         ),
       ),

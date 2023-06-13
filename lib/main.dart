@@ -44,22 +44,22 @@ Future<void> main() async {
         (dynamic error, StackTrace stackTrace) {
       print('<<----------ERROR--------->> \n$error');
       print('<<----------STACK TRACE--------->> \n$stackTrace');
-      Get.defaultDialog(
-        title: cUnknownError,
-        titleStyle: Get.textTheme.headline3,
-        middleText: cUnknownErrorDetails,
-        middleTextStyle: Get.textTheme.headline6,
-        textConfirm: cGoBack.toUpperCase(),
-        confirmTextColor: AppTheme.kWhite,
-        radius: 5,
-        buttonColor: AppTheme.kDarkBlue,
-        onConfirm: () {
-          Get.back();
-          // One to close the pop up screen.
-          // other one for back navigation from the error page.
-          Get.back();
-        },
-      );
+      // Get.defaultDialog(
+      //   title: cUnknownError,
+      //   titleStyle: Get.textTheme.headline3,
+      //   middleText: cUnknownErrorDetails,
+      //   middleTextStyle: Get.textTheme.headline6,
+      //   textConfirm: cGoBack.toUpperCase(),
+      //   confirmTextColor: AppTheme.kWhite,
+      //   radius: 5,
+      //   buttonColor: AppTheme.kDarkBlue,
+      //   onConfirm: () {
+      //     Get.back();
+      //     // One to close the pop up screen.
+      //     // other one for back navigation from the error page.
+      //     Get.back();
+      //   },
+      // );
     },
   );
 

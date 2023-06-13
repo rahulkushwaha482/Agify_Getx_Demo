@@ -1,14 +1,13 @@
 import 'package:agify_getx_demo/constant/app_theme.dart';
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
-
 class ElevatedButtonText extends StatelessWidget {
   final String buttonText;
   final dynamic onPressed;
   final double? buttonHorizontalPadding;
   final double? buttonPadding;
   final double? borderRadius;
+  final bool isLoading;
 
   const ElevatedButtonText({
     Key? key,
@@ -17,6 +16,7 @@ class ElevatedButtonText extends StatelessWidget {
     this.buttonHorizontalPadding,
     this.buttonPadding,
     this.borderRadius,
+    required this.isLoading,
   }) : super(key: key);
 
   @override
@@ -29,13 +29,15 @@ class ElevatedButtonText extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(buttonPadding ?? 10),
           child: Center(
-            child: Text(
-              buttonText,
-
-              style: TextStyle(
-                fontSize: 20
-              )
-            ),
+            child: (isLoading)
+                ? const SizedBox(
+                    height: 23,
+                    width: 23,
+                    child: CircularProgressIndicator(
+                      color: Colors.white,
+                    ),
+                  )
+                : Text(buttonText, style: const TextStyle(fontSize: 20)),
           ),
         ),
         onPressed: onPressed,
@@ -43,7 +45,7 @@ class ElevatedButtonText extends StatelessWidget {
           backgroundColor: AppTheme.kDarkBlue,
           primary: AppTheme.kDarkBlue,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius??10),
+            borderRadius: BorderRadius.circular(borderRadius ?? 10),
           ),
         ),
       ),

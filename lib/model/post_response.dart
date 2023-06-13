@@ -28,8 +28,8 @@ class PostResponse {
   );
 
   Map<String, dynamic> toJson() => {
-    "name": title,
-    "age": body,
-    "count": id,
+    "title": title,
+    "body": body,
+    "id": id,
   };
 }

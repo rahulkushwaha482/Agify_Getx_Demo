@@ -52,7 +52,7 @@ class ApiHelper {
   Future<Response?> getApiCall(String urlEndPoint) async {
     Response? response;
     try {
-      Loader().showLoadingWidget();
+     // Loader().showLoadingWidget();
       response = await get(
         Uri.parse(baseUrl + endPoint + urlEndPoint),
 

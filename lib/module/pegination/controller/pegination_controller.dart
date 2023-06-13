@@ -1,3 +1,4 @@
+import 'package:agify_getx_demo/services/db_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../model/post_response.dart';
@@ -15,13 +16,19 @@ class PeginationController extends GetxController {
 
   var isLoadingMore = false.obs;
   final users = <PostResponse>[].obs;
+  final posts = <PostResponse>[].obs;
   final scrollController = ScrollController();
   int page = 1;
 
+  DBHelper? dbHelper;
+
   @override
-  void onInit() {
+  void onInit() async {
     scrollController.addListener(_scrollListner);
-    getMorePost();
+    await getMorePost();
+    dbHelper = DBHelper();
+    DBHelper.database();
+    posts.value = (await dbHelper?.getItems())!;
     super.onInit();
   }
 
@@ -49,10 +56,19 @@ class PeginationController extends GetxController {
   Future<void> getMorePost() async {
     isLoadingMore.value = true;
     await _apiHelper.getPost(page).then(
-      (response) {
+      (response) async {
         if (response?.statusCode == 200) {
           postDetails.value = postResponseFromJson(response!.body);
           users.addAll(postDetails.value);
+
+          for (final movie in postDetails.value) {
+            await DBHelper.insertDB(PostResponse(
+                title: movie.title, body: movie.body, id: movie.id));
+          }
+          if (dbHelper?.getItems() != null) {
+            posts.value = (await dbHelper?.getItems())!;
+          }
+
           isLoadingMore.value = false;
         }
       },
