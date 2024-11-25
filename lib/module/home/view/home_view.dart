@@ -84,7 +84,7 @@ class HomeView extends GetView<HomeController> {
             ),
             Center(
               child: ElevatedButtonText(
-                buttonText: 'Open Camera',
+                buttonText: 'Custom List',
                 onPressed: controller.openCamera,
                 buttonHorizontalPadding: 0,
                 buttonPadding: 10,

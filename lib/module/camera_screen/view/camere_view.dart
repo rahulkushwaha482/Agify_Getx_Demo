@@ -11,7 +11,21 @@ class CameraView extends GetView<CameraController>{
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Center(),
+      appBar: AppBar(
+        title: Text('Custom ListView'),
+      ),
+      body: ListView.builder(itemBuilder: (BuildContext context, int index){
+           if (index % 3 == 2) {
+          return const ListTile(
+            title: Text('Ad'),
+          );
+        } else {
+          final newIndex = (index * 2 / 3).ceil();
+          return ListTile(
+            title: Text('Item #$newIndex'),
+          );
+        }
+      },itemCount: 40, )
 
     );
   }

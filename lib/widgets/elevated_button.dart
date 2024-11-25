@@ -43,7 +43,6 @@ class ElevatedButtonText extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppTheme.kDarkBlue,
-          primary: AppTheme.kDarkBlue,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 10),
           ),
